@@ -1,0 +1,71 @@
+import React from "react";
+import { NavLink } from "react-router-dom";
+const navClasses =
+  "p-1 flex justify-center items-center mx-2 lg:mx-4 hover:bg-slate-600 hover:rounded px-2";
+const navActiveClass = "bg-slate-600 rounded text-sky-100 ";
+
+const Navbar = () => {
+  return (
+    <header className="flex flex-row bg-slate-700 text-white px-10 py-4 justify-between items-center sticky w-screen min-w-screen simple-text">
+      <span>
+        <NavLink
+          to="/"
+          exact
+          className="main-heading text-4xl font-bold flex justify-between items-center p-1 px-2 hover:bg-slate-600 hover:rounded"
+        >
+          Abdullah
+        </NavLink>
+      </span>
+
+      <nav className="flex  justify-center items-center ">
+        <NavLink
+          to="/about"
+          className={({ isActive }) => {
+            if (isActive) {
+              return navClasses + " " + navActiveClass;
+            }
+            return navClasses;
+          }}
+        >
+          About Me!
+        </NavLink>
+        <NavLink
+          to="/projects"
+          className={({ isActive }) => {
+            if (isActive) {
+              return navClasses + " " + navActiveClass;
+            }
+            return navClasses;
+          }}
+        >
+          {" "}
+          Projects
+        </NavLink>
+        <NavLink
+          to="/posts"
+          className={({ isActive }) => {
+            if (isActive) {
+              return navClasses + " " + navActiveClass;
+            }
+            return navClasses;
+          }}
+        >
+          Blogs
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) => {
+            if (isActive) {
+              return navClasses + " " + navActiveClass;
+            }
+            return navClasses;
+          }}
+        >
+          Contact
+        </NavLink>
+      </nav>
+    </header>
+  );
+};
+
+export default Navbar;

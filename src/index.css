@@ -1,1 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Kaushan+Script&family=Roboto:wght@300;400;500;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+
+*{box-sizing: border-box;
+margin: 0;}
+
+.main-heading{
+  font-family: 'Dancing Script', cursive;
+}
+.secondary-heading{
+  font-family: 'Kaushan Script', cursive;
+}
+.simple-text{
+  font-family: 'Roboto', sans-serif;
+}
