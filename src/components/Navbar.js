@@ -2,16 +2,16 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 const navClasses =
   "p-1 flex justify-center items-center mx-2 lg:mx-4 hover:bg-slate-600 hover:rounded px-2";
-const navActiveClass = "bg-slate-600 rounded text-sky-100 ";
+const navActiveClass = "bg-slate-700 rounded text-sky-100 ";
 
 const Navbar = () => {
   return (
-    <header className="flex flex-row bg-slate-700 text-white px-10 py-4 justify-between items-center sticky w-screen min-w-screen simple-text">
+    <header className="flex flex-row bg-slate-800 text-white px-10 py-4 justify-between items-center sticky w-screen min-w-screen simple-text">
       <span>
         <NavLink
           to="/"
           exact
-          className="main-heading text-4xl font-bold flex justify-between items-center p-1 px-2 hover:bg-slate-600 hover:rounded"
+          className="main-heading text-4xl font-bold flex justify-between items-center p-1 px-2 hover:bg-slate-700 hover:rounded"
         >
           Abdullah
         </NavLink>
