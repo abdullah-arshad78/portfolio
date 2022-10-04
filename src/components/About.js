@@ -1,26 +1,64 @@
 import React from "react";
-import { aboutContent } from "../content/content";
+import { aboutContent } from "../content/about-content";
 import abdullah2 from "../assets/abdullah-2.jpg";
+import {
+  primaryIconContent,
+  alsoUsedIconContent,
+  interestIconContent,
+} from "../content/about-content";
 
 const About = () => {
   return (
-    <div className="p-12 bg-yellow-50">
-      <h2 className="secondary-heading text-5xl text-center mb-6 text-zinc-600">
+    <div className=" px-12 pt-[9rem] pb-[6rem]  about-background simple-text text-slate-600 text-xl">
+      <h2 className="secondary-heading text-5xl text-center mb-6 md:mb-[3rem] text-zinc-600 move-up">
         About Me!
       </h2>
       <div className="flex flex-col md:flex-row justify-center items-center">
-        <div className="md:w-[50vw] lg:w-[60vw] md:mr-2">
-          <p className="simple-text text-[1.1rem] text-center md:text-left lg:text-2xl md:leading-relaxed text-slate-700 font-light ">
+        <div className="md:w-[50vw] lg:w-[60vw] md:mr-2 xl:w-[55vw] xl:mr-[3rem] move-up">
+          <p className="simple-text text-[1.1rem] text-center md:leading-relaxed md:text-left lg:text-2xl text-slate-700 font-light ">
             {aboutContent.bio}
           </p>
         </div>
-        <div className=" mt-8 md:mt-0 md:ml-2 flex md:h-[38vw]  md:w-[45vw] justify-center items-center   lg:h-[20rem] lg:w-[20rem] ">
+        <div className=" mt-8 md:mt-0 md:ml-2 flex md:h-[38vw]  md:w-[45vw] justify-center items-center   lg:h-[20rem] lg:w-[20rem] move-up ">
           <img
             className="h-full w-full  shadow shadow-slate-400 object-cover lg:rounded-full "
             src={abdullah2}
             alt="abdullah 2"
           />
         </div>
+      </div>
+      <h2 className="secondary-heading text-5xl text-center mt-[7rem] mb-[5rem] text-zinc-600 move-up">
+        Primary Skills
+      </h2>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+        {primaryIconContent.map((iconContent) => (
+          <div className="flex flex-col justify-center items-center">
+            {iconContent.icon}
+            <span className="mt-2">{iconContent.name}</span>
+          </div>
+        ))}
+      </div>
+      <h2 className="secondary-heading text-5xl text-center mt-[7rem] mb-[5rem] text-zinc-600">
+        Also Used
+      </h2>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-[2rem] md:gap-6 md:px-4">
+        {alsoUsedIconContent.map((iconContent) => (
+          <div className="flex flex-col justify-center items-center">
+            {iconContent.icon}
+            <span className=" mt-2">{iconContent.name}</span>
+          </div>
+        ))}
+      </div>
+      <h2 className="secondary-heading text-5xl text-center mt-[7rem] mb-[5rem] text-zinc-600">
+        Interests
+      </h2>
+      <div className="grid grid-cols-2 md:grid-cols-3">
+        {interestIconContent.map((iconContent) => (
+          <div className="flex flex-col items-center justify-center my-4 ">
+            {iconContent.icon}
+            <span className="md:text-2xl mt-4">{iconContent.name}</span>
+          </div>
+        ))}
       </div>
     </div>
   );

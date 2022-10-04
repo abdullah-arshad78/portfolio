@@ -18,7 +18,6 @@ function App() {
         <Route element={<Projects />} path="/projects" />
         <Route element={<SingleBlog />} path="/posts/:slug" />
         <Route element={<Blogs />} path="/posts" />
-
         <Route element={<Contact />} path="/contact" />
       </Routes>
       <Footer />

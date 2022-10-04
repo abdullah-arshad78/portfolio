@@ -16,3 +16,51 @@ margin: 0;}
 .simple-text{
   font-family: 'Roboto', sans-serif;
 }
+.move-up{
+  animation: moveUp 700ms ease-in-out;
+}
+
+.about-background{
+  background: #f0f8ff;
+
+}
+
+
+
+
+/* Animations */
+@keyframes moveUp {
+  0%{
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  70%{
+    opacity: .5;
+    transform: translateY(-1rem);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.bulge-item:hover{
+  animation: bulge 1s linear  infinite;
+}
+
+
+@keyframes bulge {
+ 0%{
+  transform: scale(1) translateY(0);
+ }
+ 50%{
+  transform: scale(1.05) translateY(-.5rem);
+ }
+ 100%{
+  transform: scale(1) translateY(0);
+ }
+  
+}

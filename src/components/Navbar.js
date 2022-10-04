@@ -6,7 +6,7 @@ const navActiveClass = "bg-slate-700 rounded text-sky-100 ";
 
 const Navbar = () => {
   return (
-    <header className="flex flex-row bg-slate-800 text-white px-10 py-4 justify-between items-center sticky   simple-text">
+    <header className="flex flex-row bg-slate-800 text-white px-10 py-4 justify-between items-center fixed top-0 left-0 right-0  simple-text z-10">
       <span>
         <NavLink
           to="/"
