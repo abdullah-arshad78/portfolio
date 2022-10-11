@@ -34,12 +34,14 @@ const Blogs = () => {
       ))
     : "";
   return (
-    <div className="px-6 pt-[9rem] pb-[6rem]  about-background simple-text text-slate-600 text-xl  min-h-[98vh]">
+    <div className="px-6 pt-[9rem] pb-[6rem]  about-background simple-text text-slate-600 text-xl  min-h-[98vh] relative">
       <h1 className="secondary-heading text-5xl text-center mb-6 md:mb-[3rem] text-zinc-600 move-up">
         My Blogs
       </h1>
       {!blogPosts && (
-        <h2 className="secondary-heading text-3xl text-center">Loading...</h2>
+        <h2 className="secondary-heading text-5xl text-center center-element">
+          Loading...
+        </h2>
       )}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md-gap-6 xl:gap-8">
         {blogPosts && blogContent}

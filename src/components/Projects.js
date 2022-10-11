@@ -73,7 +73,7 @@ const Projects = () => {
   ));
   return (
     <div className="pt-[9rem] pb-[6rem] px-4 simple-text text-slate-600 bg-[#f1f1f1] min-h-[98vh]">
-      <h2 className="secondary-heading text-5xl text-center mb-4 md:mb-[3rem] text-zinc-600 move-up">
+      <h2 className="secondary-heading text-5xl text-center  mb-[3rem] text-zinc-600 move-up">
         Projects
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

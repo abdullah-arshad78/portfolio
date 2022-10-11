@@ -3,7 +3,7 @@ import abdullahPic from "../assets/abdullah.png";
 import { Link } from "react-router-dom";
 const Home = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center pt-[9rem] pb-[8rem] bg-gradient-to-r from-lime-100  to-cyan-100 min-h-[98vh]">
+    <div className="flex flex-col md:flex-row justify-start md:justify-center items-center pt-[9rem] pb-[8rem] bg-gradient-to-r from-lime-100  to-cyan-100 min-h-[98vh]">
       <div className="w-[15rem] md:w-[22rem] md:mr-6 rounded-full move-up">
         <img
           className="w-full h-auto rounded-full shadow-lg"

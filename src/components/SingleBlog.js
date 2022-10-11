@@ -42,14 +42,14 @@ const SingleBlog = () => {
           className="w-full h-[10rem] sm:h-[20rem] xl:h-[25rem] object-cover rounded-t-lg"
         />
         <div className="py-2 px-4 md:py-6 md:px-8 flex flex-col items-center justify-start">
-          <h1 className="secondary-heading text-5xl text-center mb-6 md:mb-[3rem] text-zinc-600 move-up my-2">
+          <h1 className="secondary-heading text-3xl lg:text-4xl xl:text-5xl text-center mb-6 md:mb-[3rem] text-zinc-600 move-up my-2">
             {singlePost.title}
           </h1>
           <SanityBlockContent
             blocks={singlePost.body}
             dataset="production"
             projectId="q6fw7y9s"
-            className="small-bio-font leading-tight sm:leading-normal lg:leading-relaxed  m:text-basic md:text-xl prose prose-slate prose-img:rounded-lg"
+            className="small-bio-font text-sm md:text-basic text-slate-600 font-light leading-normal lg:leading-relaxed  m:text-basic md:text-xl prose prose-slate prose-img:rounded-lg"
           />
         </div>
       </div>
