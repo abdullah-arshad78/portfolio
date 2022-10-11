@@ -9,13 +9,13 @@ import {
 
 const About = () => {
   return (
-    <div className=" px-12 pt-[9rem] pb-[6rem]  about-background simple-text text-slate-600 text-xl">
+    <div className="  px-4 md:px-12 pt-[9rem] pb-[6rem]  about-background simple-text text-slate-600 text-xl min-h-[98vh]">
       <h2 className="secondary-heading text-5xl text-center mb-6 md:mb-[3rem] text-zinc-600 move-up">
         About Me!
       </h2>
       <div className="flex flex-col md:flex-row justify-center items-center">
         <div className="md:w-[50vw] lg:w-[60vw] md:mr-2 xl:w-[55vw] xl:mr-[3rem] move-up">
-          <p className="simple-text text-[1.1rem] text-center md:leading-relaxed md:text-left lg:text-2xl text-slate-700 font-light ">
+          <p className="simple-text small-bio-font text-[1.1rem] text-center md:leading-relaxed md:text-left lg:text-2xl text-slate-700 font-light ">
             {aboutContent.bio}
           </p>
         </div>
@@ -32,7 +32,10 @@ const About = () => {
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
         {primaryIconContent.map((iconContent) => (
-          <div className="flex flex-col justify-center items-center">
+          <div
+            key={iconContent.id}
+            className="flex flex-col justify-center items-center"
+          >
             {iconContent.icon}
             <span className="mt-2">{iconContent.name}</span>
           </div>
@@ -43,7 +46,10 @@ const About = () => {
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-[2rem] md:gap-6 md:px-4">
         {alsoUsedIconContent.map((iconContent) => (
-          <div className="flex flex-col justify-center items-center">
+          <div
+            key={iconContent.id}
+            className="flex flex-col justify-center items-center"
+          >
             {iconContent.icon}
             <span className=" mt-2">{iconContent.name}</span>
           </div>
@@ -54,7 +60,10 @@ const About = () => {
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-3">
         {interestIconContent.map((iconContent) => (
-          <div className="flex flex-col items-center justify-center my-4 ">
+          <div
+            key={iconContent.id}
+            className="flex flex-col items-center justify-center my-4 "
+          >
             {iconContent.icon}
             <span className="md:text-2xl mt-4">{iconContent.name}</span>
           </div>

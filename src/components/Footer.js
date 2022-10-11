@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 const linkClasses =
-  " flex justify-center items-center p-1 mx-1 font-extrabold hover:-rotate-6 hover:text-cyan-300 hover:bg-slate-600 transition-all duration-300 ease-in-out";
+  " flex smallest-size justify-center items-center p-[.1rem] sm:p-1 mx-[.2em] sm:mx-1 sm:font-extrabold font-bold hover:-rotate-6 hover:text-cyan-300 hover:bg-slate-600 transition-all duration-300 ease-in-out";
 const linkClassesLeft =
-  " flex justify-center items-center p-1 mr-1 font-extrabold hover:-rotate-6 hover:text-cyan-300 hover:bg-slate-600 transition-all duration-300 ease-in-out";
+  " flex smallest-size  justify-center items-center p-[.1rem] sm:p-1 mr-[.2rem] sm:mr-1 sm:font-extrabold font-bold hover:-rotate-6 hover:text-cyan-300 hover:bg-slate-600 transition-all duration-300 ease-in-out";
 const linkClassesRight =
-  " flex justify-center items-center p-1 ml-1 font-extrabold hover:-rotate-6 hover:text-cyan-300 hover:bg-slate-600 transition-all duration-300 ease-in-out";
+  " flex smallest-size  justify-center items-center p-[.1rem] sm:p-1 ml-[.2rem] sm:ml-1 sm:font-extrabold font-bold hover:-rotate-6 hover:text-cyan-300 hover:bg-slate-600 transition-all duration-300 ease-in-out";
 const socialIconClasses =
   "mx-6 rounded-full hover:scale-110 transition-all duration-200 ease-in";
 const socialIconLeftClass =
@@ -16,10 +16,10 @@ const socialIconRightClass =
 
 const Footer = () => {
   return (
-    <div className="bg-slate-700 text-white simple-text pt-12 py-2 px-12">
+    <div className="text-sm sm:text-basic  bg-slate-700 text-white simple-text pt-12 py-2 px-12">
       <div className="flex flex-col md:flex-row justify-between  my-6 py-3 items-center">
         <div className="flex mb-8 md:mb-0 border-t-2 py-4 ">
-          <Link to="/" exact className={linkClassesLeft}>
+          <Link to="/" className={linkClassesLeft}>
             HOME
           </Link>
           <Link to="/about" className={linkClassesLeft}>

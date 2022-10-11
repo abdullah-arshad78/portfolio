@@ -4,6 +4,9 @@
 @tailwind utilities;
 
 
+body{
+  position: relative;
+}
 *{box-sizing: border-box;
 margin: 0;}
 
@@ -23,6 +26,111 @@ margin: 0;}
 .about-background{
   background: #f0f8ff;
 
+}
+.translate-to-mid{
+  transform: translate(-50%,-50%);
+}
+
+/* Background */
+.computer-bg{
+  background-image: linear-gradient(
+        105deg,
+        rgba(255,255,255, 0.9) 0%,
+        rgba(255,255,255, 0.9) 56%,
+        transparent 56%
+      ),
+      url("./assets/computer-image.jpg");
+      background-size: cover;
+    background-repeat: none;
+    background-position: 100% 0;
+}
+@media only screen and (max-width: 64em) {
+  .computer-bg{
+    background-image: linear-gradient(
+      105deg,
+      rgba(255,255,255, 0.9) 0%,
+      rgba(255,255,255, 0.9) 60%,
+      transparent 60%
+    ),
+    url("./assets/computer-image.jpg");
+  }
+  }
+@media only screen and (max-width: 48em) {
+.computer-bg{
+  background-image: linear-gradient(
+    105deg,
+    rgba(255,255,255, 0.9) 0%,
+    rgba(255,255,255, 0.9) 100%
+  ),
+  url("./assets/computer-image.jpg");
+}
+}
+
+
+
+.form-input::placeholder{
+  font-weight: 300;
+}
+
+.form-btn:disabled{
+  position: relative;
+  color:#413F42;
+  background: #DFDFDE;
+  cursor: not-allowed;
+  border:3px solid #413F42;
+}
+.form-btn:disabled:hover{
+  color:#413F42;
+  background: #DFDFDE;
+  border:3px solid #413F42;
+}
+.form-btn:disabled::after{
+  content: "You cannot submit empty or invalid form";
+  position: absolute;
+  right: -260%;
+  top: 0;
+  padding: .5rem;
+  color: #000;
+  background: rgb(240, 219, 219);
+  font-size: .8rem;
+  width: max-content;
+  border-radius: .5rem;
+  border: 2px solid rgb(131, 75, 75);
+  opacity: 0;
+  transition: all ease-in;
+  transition-duration: .2s;
+  transition-delay: 1s;
+  display: 0;
+}
+.form-btn:disabled:hover::after{
+  opacity: 1;
+  display: inline-block;
+  
+}
+/* Move half up */
+
+.up-half{
+  transform: translateY(-50%);
+}
+
+/* Move left 50% */
+.center-left{
+  transform: translateX(-50%);
+}
+
+.blog-container::after{
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+
+background: rgba(0,0,0,.5);
+z-index: 2;
+}
+
+.blog-container:hover::after{
+ top: 0;
 }
 
 
@@ -49,6 +157,25 @@ margin: 0;}
 
 .bulge-item:hover{
   animation: bulge 1s linear  infinite;
+}
+
+.backdrop{
+  background: rgba(0,0,0,.5);
+}
+
+@media (max-width:300px){
+  .smallest-size{
+    font-size: .76rem;
+  }
+  .small-bio-font{
+    font-size: .9rem;
+  }
+}
+
+@media (max-width:325px){
+ .small-project-heading{
+  font-size: 1.2rem;
+ }
 }
 
 
