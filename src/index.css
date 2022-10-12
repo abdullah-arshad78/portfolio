@@ -90,29 +90,7 @@ margin: 0;}
   background: #DFDFDE;
   border:3px solid #413F42;
 }
-.form-btn:disabled::after{
-  content: "You cannot submit empty or invalid form";
-  position: absolute;
-  right: -260%;
-  top: 0;
-  padding: .5rem;
-  color: #000;
-  background: rgb(240, 219, 219);
-  font-size: .8rem;
-  width: max-content;
-  border-radius: .5rem;
-  border: 2px solid rgb(131, 75, 75);
-  opacity: 0;
-  transition: all ease-in;
-  transition-duration: .2s;
-  transition-delay: 1s;
-  display: 0;
-}
-.form-btn:disabled:hover::after{
-  opacity: 1;
-  display: inline-block;
-  
-}
+
 /* Move half up */
 
 .up-half{

@@ -87,7 +87,7 @@ const ContactForm = () => {
       <form
         ref={form}
         onSubmit={formSubmitHandler}
-        className="py-6 bg-transparent w-full md:w-[58%] lg:w-[55.5%] p-4 rounded"
+        className="py-6 bg-transparent w-full md:w-[58%] lg:w-[55.5%] p-4 rounded text-sm"
       >
         <div className="my-4">
           <label htmlFor="name" className="block font-bold">
@@ -99,22 +99,20 @@ const ContactForm = () => {
             type="text"
             className={`${
               nameHasError ? "bg-[#f5ebeb]" : ""
-            } rounded text-[1rem]  w-[90%] focus:w-[95%] focus:outline-0 focus:border-b-4  ${
+            } rounded text-[1rem]  w-[100%] md:w-[90%] md:focus:w-[95%] focus:outline-0 focus:border-b-4  ${
               nameHasError ? "focus:border-red-400" : "focus:border-cyan-700"
-            } form-input py-2 px-3 my-1 shadow transition-all duration-150 ease-in text-basic`}
+            } form-input py-2 px-3 my-1 shadow transition-all duration-150 ease-in `}
             placeholder="John Smith"
             value={nameValue}
             onChange={nameChangeHandler}
             onBlur={nameBlurHandler}
           />
           {nameHasError && (
-            <span className="text-[1rem] block text-red-400">
-              Please add a valid name
-            </span>
+            <span className="block text-red-400">Please add a valid name</span>
           )}
         </div>
         <div className="my-4">
-          <label htmlFor="email" className="block font-bold">
+          <label htmlFor="email" className="block  font-bold">
             Email
           </label>
           <input
@@ -123,9 +121,9 @@ const ContactForm = () => {
             name="email"
             className={`${
               emailHasError ? "bg-[#f5ebeb]" : ""
-            } rounded text-[1rem]  w-[90%] focus:w-[95%] focus:outline-0 focus:border-b-4 ${
+            } rounded text-[1rem]  w-[100%] md:w-[90%] md:focus:w-[95%] focus:outline-0 focus:border-b-4 ${
               emailHasError ? "focus:border-red-400" : "focus:border-cyan-700"
-            } form-input py-2 px-3 my-1 shadow transition-all duration-150 ease-in text-basic`}
+            } form-input py-2 px-3 my-1 shadow transition-all duration-150 ease-in `}
             placeholder="Johnsmith@example.com"
             formNoValidate
             value={emailValue}
@@ -133,7 +131,7 @@ const ContactForm = () => {
             onBlur={emailBlurHandler}
           />
           {emailHasError && (
-            <span className="text-[1rem] block text-red-400">
+            <span className="block text-red-400">
               Please add a valid email{" "}
             </span>
           )}
@@ -145,9 +143,9 @@ const ContactForm = () => {
           <textarea
             className={`${
               textHasError ? "bg-[#f5ebeb]" : ""
-            } resize-none text-[1rem]  rounded w-[90%] focus:w-[95%] h-[12rem] focus:outline-0 focus:border-2 ${
+            } resize-none text-[1rem]  rounded w-[100%] md:w-[90%] md:focus:w-[95%] h-[12rem] focus:outline-0 focus:border-2 ${
               textHasError ? "focus:border-red-400" : "focus:border-cyan-700"
-            } form-input py-2 px-3 my-1 shadow transition-all duration-150 ease-in text-basic`}
+            } form-input py-2 px-3 my-1 shadow transition-all duration-150 ease-in`}
             placeholder="Your Text ..."
             value={textValue}
             onChange={textChangeHandler}
@@ -155,7 +153,7 @@ const ContactForm = () => {
             name="text"
           />
           {textHasError && (
-            <span className="text-[1rem] block text-red-400 mt-[-.5rem]">
+            <span className=" block text-red-400 mt-[-.5rem]">
               Minimun 10 characters required{" "}
             </span>
           )}
