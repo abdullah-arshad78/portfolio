@@ -12,6 +12,7 @@ import relaxerImg from "../assets/relaxer-app-img.png";
 import sortableListImg from "../assets/sortable-list-img.png";
 import ptSite from "../assets/pt-site-img.png";
 import foodOrderImg from "../assets/food-order-app.png";
+import reduxMiniImg from "../assets/redux-mini.png";
 
 const projectsContent = [
   {
@@ -19,7 +20,7 @@ const projectsContent = [
     name: "Personal Trainer Site",
     image: ptSite,
     tags: ["responsive", "frontend", "workout"],
-    tools: ["React", "SASS", "EmailJS"],
+    tools: ["React", "SCSS", "EmailJS"],
     views: {
       sourceCode: "https://github.com/abdullah-arshad78/pt-site",
       liveSite: "https://capable-kangaroo-217048.netlify.app/",
@@ -28,6 +29,19 @@ const projectsContent = [
   },
   {
     id: "p2",
+    name: "Mini Redux App",
+    image: reduxMiniImg,
+    tags: ["responsive", "frontend", "e-commerce"],
+    tools: ["React", "SCSS", "Redux"],
+    views: {
+      sourceCode: "https://github.com/abdullah-arshad78/redux-mini-app",
+      liveSite: "https://mini-redux-app.netlify.app/",
+    },
+    desktopOnly: false,
+  },
+
+  {
+    id: "p3",
     name: "Yelp Camp",
     image: yelpCampImg,
     tags: ["responsive", "fullstack", "camping"],
@@ -39,19 +53,19 @@ const projectsContent = [
     desktopOnly: false,
   },
   {
-    id: "p3",
-    name: "Natours",
-    image: natoursImg,
-    tags: ["responsive", "frontend", "nature"],
-    tools: ["HTML", "SCSS", "Animations"],
+    id: "p4",
+    name: "Food Order App",
+    image: foodOrderImg,
+    tags: ["responsive", "frontend", "food"],
+    tools: ["React", "Context API", "Stripe"],
     views: {
-      sourceCode: "https://github.com/abdullah-arshad78/natours-project",
-      liveSite: "https://abdullah-arshad78.github.io/natours-project/",
+      sourceCode: "https://github.com/abdullah-arshad78/food-order",
     },
     desktopOnly: false,
   },
+
   {
-    id: "p4",
+    id: "p5",
     name: "Ahmed Solutions",
     image: ahmedSolImg,
     tags: ["responsive", "frontend", "marketing"],
@@ -63,7 +77,7 @@ const projectsContent = [
     desktopOnly: false,
   },
   {
-    id: "p5",
+    id: "p6",
     name: "Hotel Overview",
     image: hotelOverviewImg,
     tags: ["responsive", "frontend", "hotels"],
@@ -75,7 +89,7 @@ const projectsContent = [
     desktopOnly: false,
   },
   {
-    id: "p6",
+    id: "p7",
     name: "Nexter",
     image: nexterImg,
     tags: ["responsive", "frontend", "real estate"],
@@ -86,19 +100,21 @@ const projectsContent = [
     },
     desktopOnly: false,
   },
+
   {
-    id: "p7",
-    name: "Food Order App",
-    image: foodOrderImg,
-    tags: ["responsive", "frontend", "food"],
-    tools: ["React", "Context API", "Stripe"],
+    id: "p8",
+    name: "Natours",
+    image: natoursImg,
+    tags: ["responsive", "frontend", "nature"],
+    tools: ["HTML", "SCSS", "Animations"],
     views: {
-      sourceCode: "https://github.com/abdullah-arshad78/food-order",
+      sourceCode: "https://github.com/abdullah-arshad78/natours-project",
+      liveSite: "https://abdullah-arshad78.github.io/natours-project/",
     },
     desktopOnly: false,
   },
   {
-    id: "p8",
+    id: "p9",
     name: "Expense Tracker",
     image: expenseTrackerImg,
     tags: ["frontend", "finances"],
@@ -110,7 +126,7 @@ const projectsContent = [
     desktopOnly: false,
   },
   {
-    id: "p9",
+    id: "p10",
     name: "Exchange Rate Calculator",
     image: exchangeRateImg,
     tags: ["frontend", "finances"],
@@ -123,7 +139,7 @@ const projectsContent = [
     desktopOnly: true,
   },
   {
-    id: "p10",
+    id: "p11",
     name: "Sortable List",
     image: sortableListImg,
     tags: ["frontend", "draggable"],
@@ -135,7 +151,7 @@ const projectsContent = [
     desktopOnly: true,
   },
   {
-    id: "p11",
+    id: "p12",
     name: "Meal Finder",
     image: mealFinderImg,
     tags: ["frontend", "API"],
@@ -147,7 +163,7 @@ const projectsContent = [
     desktopOnly: true,
   },
   {
-    id: "p12",
+    id: "p13",
     name: "Breakout Game",
     image: breakoutGameImg,
     tags: ["frontend", "game"],
@@ -159,7 +175,7 @@ const projectsContent = [
     desktopOnly: true,
   },
   {
-    id: "p13",
+    id: "p14",
     name: "Relaxer App",
     image: relaxerImg,
     tags: ["frontend", "breathing"],
@@ -171,13 +187,13 @@ const projectsContent = [
     desktopOnly: true,
   },
   {
-    id: "p14",
+    id: "p15",
     name: "Infinite Scroll",
     image: infiniteScrollImg,
     tags: ["frontend", "scroll"],
     tools: ["HTML", "CSS", "JavaScript"],
     views: {
-      sourceCode: "https://abdullah-arshad78.github.io/infinite-scroll/",
+      sourceCode: "https://github.com/abdullah-arshad78/infinite-scroll",
       liveSite: "https://abdullah-arshad78.github.io/infinite-scroll/",
     },
     desktopOnly: true,
