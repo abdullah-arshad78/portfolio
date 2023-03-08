@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import ContactForm from "./ContactForm";
-import MyMap from "./MyMap";
 
 import useDarkMode from "../hooks/useDarkMode";
 
@@ -29,14 +28,6 @@ const Contact = () => {
       >
         <ContactForm />
       </div>
-      <h2
-        className={`secondary-heading text-4xl xl:text-5xl text-center mt-[3rem]  mb-6 md:mb-[3rem]   move-up ${
-          isDarkMode ? "text-white" : "text-zinc-600"
-        }`}
-      >
-        Based in Limerick
-      </h2>
-      <MyMap />
     </div>
   );
 };
