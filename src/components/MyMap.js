@@ -18,7 +18,7 @@ const MyMap = () => {
           latitude: 52.66,
           zoom: 10,
         }}
-        mapboxAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
+        mapboxAccessToken="pk.eyJ1IjoiYWJkdWxsYWgtYXJzaGFkNzgiLCJhIjoiY2tzYXE1b3R6MGd0cTJubjMwcWRmMjBudCJ9.KPBHeTfvtKKbWClKq32P4g"
         style={{ width: "100%", height: "100%" }}
         mapStyle={
           isDarkMode
