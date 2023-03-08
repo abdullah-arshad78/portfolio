@@ -9,6 +9,7 @@ import {
   FaPodcast,
   FaHiking,
 } from "react-icons/fa";
+
 import {
   SiRedux,
   SiJavascript,
@@ -28,12 +29,12 @@ export const aboutContent = {
 };
 
 const primaryIconClass =
-  "w-[6rem] h-[6rem]  md:w-[8rem] md:h-[8rem] bulge-item";
+  "w-[6rem] h-[6rem]  md:w-[8rem] md:h-[8rem] bulge-item drop-shadow-dark";
 
-const alsoUsedIconClass = "w-[5rem] h-[5rem] bulge-item";
+const alsoUsedIconClass = "w-[5rem] h-[5rem] bulge-item drop-shadow-dark";
 
 const interestIconClasses =
-  "w-[4rem] h-[4rem] md:w-[5rem] md:h-[5rem] bulge-item";
+  "w-[4rem] h-[4rem] md:w-[5rem] md:h-[5rem] bulge-item drop-shadow-dark";
 
 export const primaryIconContent = [
   {
@@ -80,7 +81,7 @@ export const primaryIconContent = [
   {
     id: "pc8",
     icon: (
-      <SiCss3 className="w-[5rem] h-[5rem]  md:w-[7rem] md:h-[7rem] bulge-item  fill-[#264de4]" />
+      <SiCss3 className="w-[5rem] h-[5rem]  md:w-[7rem] md:h-[7rem] bulge-item drop-shadow-dark  fill-[#264de4]" />
     ),
     name: "CSS3",
   },

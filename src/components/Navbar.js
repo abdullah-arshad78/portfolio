@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaTimes } from "react-icons/fa";
+import useDarkMode from "../hooks/useDarkMode";
 const navClasses =
   "p-1 flex justify-center items-center mx-2 lg:mx-4 hover:bg-slate-600 hover:rounded px-2";
 const navActiveClass = "bg-slate-700 rounded text-sky-100 ";
@@ -11,11 +12,14 @@ const Navbar = ({
   toggleNavbar,
   mobileNavbarIsVisible,
 }) => {
+  const { isDarkMode } = useDarkMode();
   return (
     <header
       className={`${
         isMobileNavigation ? "py-2 pl-2 pr-6" : "px-10 py-4 "
-      } flex flex-row bg-slate-800 text-white   justify-between items-center fixed top-0 left-0 w-screen max-w-screen min-w-screen  simple-text z-40`}
+      } flex flex-row ${
+        isDarkMode ? "bg-[#041C32]" : "bg-slate-800"
+      }  text-white   justify-between items-center fixed top-0 left-0 w-screen max-w-screen min-w-screen  simple-text z-40`}
     >
       <span>
         <NavLink

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Blogs from "./components/Blogs";
@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Projects from "./components/Projects";
 import SingleBlog from "./components/SingleBlog";
 import MobileNavigation from "./components/MobileNavigation";
+import DarkModeToggler from "./UI/DarkModeToggler";
 
 function App() {
   const [windowWidth, setWindowWith] = useState(window.innerWidth);
@@ -50,6 +51,8 @@ function App() {
       {showMobileNavbar && showMobileNavigation && (
         <MobileNavigation onClose={closeMobileNavbarHandler} />
       )}
+      <DarkModeToggler />
+
       <Routes>
         <Route element={<Home />} path="/" exact />
         <Route element={<About />} path="/about" />
@@ -57,6 +60,7 @@ function App() {
         <Route element={<SingleBlog />} path="/posts/:slug" />
         <Route element={<Blogs />} path="/posts" />
         <Route element={<Contact />} path="/contact" />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />
     </BrowserRouter>

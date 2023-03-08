@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import projectsContent from "../content/projects-content";
 import { GoDeviceDesktop } from "react-icons/go";
 import { MdOutlineScreenSearchDesktop } from "react-icons/md";
 import { BsGithub } from "react-icons/bs";
 
+import useDarkMode from "../hooks/useDarkMode";
+
 const Projects = () => {
+  const { isDarkMode } = useDarkMode();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const projectGridItems = projectsContent.map((project) => (
     <div
       key={project.id}
-      className="rounded-lg shadow-md shadow-[rgba(0,0,0,.3)] grid justify-items-center overflow-hidden relative bg-gradient-to-r from-stone-200  to-neutral-100 move-up"
+      className={`rounded-lg shadow-md shadow-[rgba(0,0,0,.3)] grid justify-items-center overflow-hidden relative move-up bg-gradient-to-r ${
+        isDarkMode
+          ? "drop-shadow-dark  from-gray-900 to-indigo-900"
+          : "  from-stone-200  to-neutral-100"
+      }`}
     >
       <img
         className="object-cover w-full h-auto dark-cover relative"
@@ -16,7 +26,11 @@ const Projects = () => {
         alt={project.name}
       />
 
-      <h3 className="secondary-heading small-project-heading text-white bg-slate-800 opacity-90 py-2 px-4 text-2xl w-[max-content] up-half shadow rounded">
+      <h3
+        className={`secondary-heading small-project-heading text-white bg-slate-800 opacity-90 py-2 px-4 text-2xl w-[max-content] up-half shadow rounded ${
+          isDarkMode && "drop-shadow-dark"
+        }`}
+      >
         {project.name}
       </h3>
       <div>
@@ -33,7 +47,7 @@ const Projects = () => {
         {project.tags.map((tag) => (
           <span
             key={tag}
-            className="smallest-size bg-slate-100 py-1 px-2 rounded mx-1 text-sm shadow  inline-block m-2"
+            className={`smallest-size bg-slate-100 py-1 px-2 rounded mx-1 text-sm shadow  inline-block m-2`}
           >
             {tag}
           </span>
@@ -51,7 +65,9 @@ const Projects = () => {
           href={project.views.sourceCode}
           target="_blank"
           rel="noreferrer noopener"
-          className="flex justify-center items-center mr-[.1rem] sm:mr-2 bg-slate-700 text-white py-2 px-2 rounded-lg shadow hover:text-slate-700 hover:bg-slate-200 transition-all duration-300 ease-in"
+          className={`flex justify-center items-center mr-[.1rem] sm:mr-2 bg-slate-700 text-white py-2 px-2 rounded-lg shadow hover:text-slate-700 hover:bg-slate-200 transition-all duration-300 ease-in ${
+            isDarkMode && "drop-shadow-dark"
+          }`}
         >
           <BsGithub className="w-[1.5rem] h-[1.5rem] mr-1" />
           <span>Source Code</span>{" "}
@@ -61,7 +77,9 @@ const Projects = () => {
             href={project.views.liveSite}
             target="_blank"
             rel="noreferrer noopener"
-            className="flex justify-center items-center ml-[.1rem] sm:ml-2 bg-slate-700 text-white py-2 px-2 rounded-lg shadow hover:text-slate-700 hover:bg-slate-200 transition-all duration-300 ease-in"
+            className={`flex justify-center items-center ml-[.1rem] sm:ml-2 bg-slate-700 text-white py-2 px-2 rounded-lg shadow hover:text-slate-700 hover:bg-slate-200 transition-all duration-300 ease-in ${
+              isDarkMode && "drop-shadow-dark"
+            }`}
           >
             {" "}
             <MdOutlineScreenSearchDesktop className="w-[1.5rem] h-[1.5rem] mr-1" />
@@ -72,8 +90,16 @@ const Projects = () => {
     </div>
   ));
   return (
-    <div className="pt-[9rem] pb-[6rem] px-4 simple-text text-slate-600 bg-[#f1f1f1] min-h-[98vh]">
-      <h2 className="secondary-heading text-5xl text-center  mb-[3rem] text-zinc-600 move-up">
+    <div
+      className={`pt-[9rem] pb-[6rem] px-4 simple-text text-slate-600  ${
+        isDarkMode ? "dark-mode-bg" : "about-background"
+      } min-h-[98vh]`}
+    >
+      <h2
+        className={`secondary-heading text-5xl text-center  mb-[3rem] ${
+          isDarkMode ? "text-white" : "text-zinc-600"
+        } move-up`}
+      >
         Projects
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

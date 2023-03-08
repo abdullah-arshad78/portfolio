@@ -66,7 +66,7 @@ const ContactForm = () => {
         "service_06qs6kl",
         "template_8sybrec",
         form.current,
-        "R7jAWGM_g9F_xoeGU"
+        process.env.REACT_APP_EMAILJS_KEY
       )
       .then(
         () => {

@@ -1,12 +1,21 @@
 import React from "react";
-
+import useDarkMode from "../hooks/useDarkMode";
 const SuccessContainer = (props) => {
+  const { isDarkMode } = useDarkMode();
   return (
     <div
-      className="bg-slate-300 text-slate-700 w-[80%] md:w-[50%] simple-text border-2 border-green-500 p-6 md:py-8 text-center fixed top-[40%] left-[50%] translate-to-mid rounded-lg"
+      className={`${
+        isDarkMode
+          ? "bg-slate-800 text-slate-300 border-green-300"
+          : "bg-slate-300 text-slate-700 border-green-500"
+      }  w-[80%] md:w-[50%] simple-text border-2  p-6 md:py-8 text-center fixed top-[40%] left-[50%] translate-to-mid rounded-lg`}
       onClick={props.onClose}
     >
-      <h2 className="secondary-heading text-2xl md:text-3xl text-green-900">
+      <h2
+        className={`secondary-heading text-2xl md:text-3xl ${
+          isDarkMode ? "text-green-400" : "text-green-900"
+        }`}
+      >
         Form Successfully Submitted.
       </h2>
       <p className="my-4">
