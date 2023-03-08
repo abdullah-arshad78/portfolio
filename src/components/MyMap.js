@@ -18,7 +18,7 @@ const MyMap = () => {
           latitude: 52.66,
           zoom: 10,
         }}
-        mapboxAccessToken="pk.eyJ1IjoiYWJkdWxsYWgtYXJzaGFkNzgiLCJhIjoiY2tzYXE1b3R6MGd0cTJubjMwcWRmMjBudCJ9.KPBHeTfvtKKbWClKq32P4g"
+        mapboxAccessToken="pk.eyJ1IjoiYWJkdWxsYWgtYXJzaGFkNzgiLCJhIjoiY2xlenQ3eDZmMDJoYzNxdDVmZzBmYXhwZiJ9.IV3Ec86corUVXT_oRoSF3w"
         style={{ width: "100%", height: "100%" }}
         mapStyle={
           isDarkMode
