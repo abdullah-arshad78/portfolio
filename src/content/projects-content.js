@@ -13,8 +13,21 @@ import sortableListImg from "../assets/sortable-list-img.png";
 import ptSite from "../assets/pt-site-img.png";
 import foodOrderImg from "../assets/food-order-app.png";
 import reduxMiniImg from "../assets/redux-mini.png";
+import onlineStore from "../assets/online-store.png";
 
 const projectsContent = [
+  {
+    id: "p0",
+    name: "Online Store",
+    image: onlineStore,
+    tags: ["responsive", "frontend", "e-commerce"],
+    tools: ["React", "Router", "TailwindCSS"],
+    views: {
+      sourceCode: "https://github.com/abdullah-arshad78/small-shop/",
+      liveSite: "https://e-commerce-app-c6dd7.web.app/",
+    },
+    desktopOnly: false,
+  },
   {
     id: "p1",
     name: "Personal Trainer Site",
