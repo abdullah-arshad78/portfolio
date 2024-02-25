@@ -14,8 +14,21 @@ import ptSite from "../assets/pt-site-img.png";
 import foodOrderImg from "../assets/food-order-app.png";
 import reduxMiniImg from "../assets/redux-mini.png";
 import onlineStore from "../assets/online-store.png";
+import airlinkImage from "../assets/airlinkImage.png";
 
 const projectsContent = [
+  {
+    id: "p",
+    name: "Airlink Website",
+    image: airlinkImage,
+    tags: ["responsive", "frontend", "travel agency"],
+    tools: ["React", "Tanstack", "TailwindCSS"],
+    views: {
+      sourceCode: "https://github.com/abdullah-arshad78/airlink",
+      liveSite: "https://airlink-b8a91.web.app/",
+    },
+    desktopOnly: false,
+  },
   {
     id: "p0",
     name: "Online Store",
